@@ -1,3 +1,8 @@
+This Repo is for hosting the Website
+The Repo for code is in BitBucket 
+
+
+Learning Notes: 
 ///////// 6/13/2016 Monday. Edited on 6/14, 6/15, 6/16, ???, 6/20 , 6/23(use repo history),...,6/30
 
 ///// section I: initial setup 
