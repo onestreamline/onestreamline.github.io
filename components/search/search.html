@@ -1,0 +1,103 @@
+﻿
+    <div class="row container-fluid" >
+        <h2 class="sub-header">EAN API</h2>
+        <form name="myForm" class="navbar-form navbar-left navbar-collapse" ng-submit="submitFunctionGetHotel()">
+            <div class="form-group ">
+                <label>
+                    destination: city:
+                    <input type="text" class="form-control " placeholder="San Francisco..." name="city" ng-model="searchCRiteria.city"
+                           ng-minlength="3" ng-maxlength="15" required>
+                </label>
+                
+            </div>
+            <div class="form-group ">
+                <label>
+                    destination: state:
+                    <input type="text" class="form-control " placeholder="CA" name="state" ng-model="searchCRiteria.state"
+                           ng-minlength="3" ng-maxlength="15" required>
+                </label>
+                
+            </div>
+            <div class="form-group ">
+                <label>
+                    check in:
+                    <input type="text" name="arrivalDate" ng-model="searchCRiteria.arrivalDate" class="form-control" placeholder="MM/DD/YYYY">
+
+                </label>
+                
+            </div>
+            <div class="form-group ">
+                <label>
+                    check out:
+                    <input type="text" name="departureDate" ng-model="searchCRiteria.departureDate" class="form-control" placeholder="mm/dd/yyyy">
+
+                </label>
+                <!--<div role="alert">
+                    <span class="error" ng-show="myForm.userName.$error.required">
+                        User name is Required!
+                    </span>
+                </div>-->
+            </div>
+            <div class="form-group ">
+                <label>
+                   guests:
+                    <input type="text" name="room1" ng-model="searchCRiteria.room1" class="form-control" placeholder="2...">
+
+                </label>
+                <!--<div role="alert">
+            <span class="error" ng-show="myForm.userName.$error.required">
+                User name is Required!
+            </span>
+        </div>-->
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default btn-lg pull-right">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Submit
+                </button>
+
+            </div>
+        </form>
+       
+    </div>
+<div class="row container-fluid hide">
+    <!--moved down to the page to jumbo tron-->
+    <!--troubleshooting purpose .. hidden ... on html raw view /view page source 
+    <p>customer session: {{hotel.HotelListResponse.customerSessionId}}</p>
+    <p>number of rooms requested: {{hotel.HotelListResponse.numberOfRoomsRequested}}</p>
+    <p>more results available: {{hotel.HotelListResponse.moreResultsAvailable}}</p>
+    <p>cache key: {{hotel.HotelListResponse.cacheKey}}</p>
+    <p>cache location: {{hotel.HotelListResponse.cacheLocation}}</p>
+
+    Add Sort features vs filter features--> 
+</div>
+    <div class="table-responsive row">
+
+        <h3><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Based on your search of {{hotel.HotelListResponse.numberOfRoomsRequested}} room, at {{searchCRiteria.city}} from {{searchCRiteria.arrivalDate}} to {{searchCRiteria.departureDate}} </h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>price</th>
+                    <th>name</th>
+                    <th>address</th>
+                    <th>city</th>
+                    <th>rating</th>
+
+                </tr>
+            </thead>
+            <tbody ng-repeat="h in hotel.HotelListResponse.HotelList.HotelSummary">
+                <tr>
+                    <td>{{h.lowRate}}</td>
+                    <td><a target="_blank" href="{{h.deepLink}}">{{h.name}}</a></td>
+                    <td>{{h.address1}}</td>
+                    <td>{{h.city}}</td>
+                    <td>{{h.tripAdvisorRating}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="row" ng-controller="JumbotronTemplateController">
+    <div ng-include="'components/search/searchNote.html'" ng-show="showJumbotronTemplate">
+    </div>
+</div>

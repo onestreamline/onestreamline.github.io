@@ -1,0 +1,41 @@
+﻿<!--this is a placeholder for system messages across different pages-->
+<div ng-controller="JumbotronTemplateController">
+    <div ng-include="'layout/jumbotronTemplate.html'" ng-show="showJumbotronTemplate">
+    </div>
+</div>
+<!--this is for the current page; content goes to here-->
+<div ng-controller="ListController">
+    <h2>{{ message }}</h2>
+
+    <!--table begin-->
+    <div class="table-responsive row">
+        <h3>
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        </h3>
+        <!--to do: add sorting ability to the bootstrap table per column-->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>desc</th>
+                    <th>name</th>
+                    <th>shortLink</th>
+                    <th>dateLastActivity</th>
+                    <th>closed</th>
+
+                </tr>
+            </thead>
+            <tbody ng-repeat="h in trelloBoards.boardsResponse | orderBy:'-closed' | filter:{closed:false}">
+                <tr>
+                    <td>{{h.desc}}</td>
+                    <td><a target="_blank" href="{{h.url}}">{{h.name}}</a></td>
+                    <td><a href="#/list/{{h.idBoard}}">the lists of current board</a></td>
+                    <td><a href="#/lists">back to boards</a></td>
+                    <td><a href="#/cards/{{h.id}}">this list's cards</a></td>
+                    <td>{{h.closed}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--table end-->
+</div>

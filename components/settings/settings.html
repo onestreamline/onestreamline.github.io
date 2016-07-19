@@ -1,0 +1,238 @@
+﻿<div ng-controller="JumbotronTemplateController">
+    <div ng-include="'layout/jumbotronTemplate.html'" ng-show="showJumbotronTemplate">
+    </div>
+</div>
+
+
+<div ng-controller="SettingsController">
+    <style>
+        .spacer {
+            margin-top: 40px; /* define margin as you see fit */
+        }
+    </style>
+    
+
+        <h2 class="sub-header">{{ message }}</h2>
+
+        <div class="alert alert-success">
+            <h3>backup center</h3>
+            <p>work flow</p>           
+          
+            <!--google auth-->          
+            <div class="alert alert-info" id="authorize-div" style="display:none">
+                <span>step 1: </span>
+                <span>Authorize access to Google Sheets API</span>
+                <!--Button for the user to click to initiate auth sequence -->
+                <!--<button id="authorize-button" ng-click="handleAuthClickBtn(event)">
+            Authorize
+        </button>-->
+                <button id="authorize-button" onclick="handleAuthClick(event)">
+                    Authorize
+                </button>
+                <button id="authorize-button" ng-click="checkAuth1()">
+                    check if auth
+                </button>
+            </div>
+           
+            <p><a class="btn btn-primary btn-md" ng-show="true" ng-click="loginTrelloBtnClick()">step 2: log in to trello</a></p>
+            <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readBoardsBtnClick()">step 3: test reading trello boards</a></p>
+            <div class="alert alert-info">
+               <p>note: can skip this step; it's a manual process. Use step5, automatic generating a google sheet</p>
+                <span>step 4: Specify a sheet ID. example: 1IaRsdCfI5OMTHxmmxllGdW94o-CmijkhNE4q_76rASc</span>
+                <label>
+                    Sheet ID:
+                    <input type="text" class="form-control " placeholder="sheet ID..." name="googleUserSheetID" ng-model="googleUser.sheetID"
+                           required>
+                </label>
+                <label>
+                    Sheet Tab:
+                    <input type="text" class="form-control " placeholder="sheet Tab..." name="googleUserSheetTab" ng-model="googleUser.sheetTab"
+                           required>
+                </label>
+                <a class="btn btn-danger btn-md" ng-show="true" ng-click="makeRestRequest2BtnClick()">Backup Now to google drive sheet</a>
+                <p>
+                    check my boards backup (your sheet ID: {{googleUser.sheetID}} ) at
+                    <a target="_blank" href="{{googleUser.sheetURL}}">{{googleUser.sheetURL}}</a>
+                </p>
+            </div>
+         
+            <div class="alert alert-info">
+              
+                <span>step 5: auto generate a new sheet and tab </span> <!--Ref: https://developers.google.com/sheets/reference/rest/v4/spreadsheets/create-->
+                <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="createSheetBtnClick()">Create a sheet and back up data</a>
+                </p>
+                <div ng-model="latestsheetURL" ng-hide="false">
+                    check my boards backup (your sheet ID: {{latestSheetID}} ) at
+                    <a target="_blank" href="{{latestsheetURL}}">{{latestsheetURL}}</a>
+                    <!--<input type="text" class="" placeholder="latestsheetURL..." name="latestsheetURL" ng-model="latestsheetURL" />-->
+                    <!--angular data binding to page; like after an ajax call-->
+                    <!--angularjs syntax: {{latestSheetID == null}}-->
+                    <p><a class="btn btn-warning btn-md" ng-hide="!showReadBtn" ng-click="readSheetBtnClick()">read the sheet just created</a></p>
+
+                </div>
+                <!--if {{latestSheetID}} is here, then show the button:--> 
+                <span>step 5: Specify a DateTime. example: Wednesday @3AM to automatically create a new sheet and push data from trello to google drive. fully automated process </span>
+                <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readSheetBtnClick()">Backup Later on DateTime</a></p>
+
+            </div>
+            
+        </div>
+        <div class="alert alert-info">
+            <h3>toggles to turn these features on/off</h3>
+            <p><a class="btn btn-primary btn-md" ng-show="true" ng-click="saveUserBtnClick()">Save User Info to Google Drive</a></p>
+
+            <p><a class="btn btn-primary btn-md" ng-show="!showDeveloperMode" ng-click="goDevMode('on')">developer mode on</a></p>
+            <p><a class="btn btn-primary btn-md" ng-show="showDeveloperMode" ng-click="goDevMode('off')">developer mode off</a></p>
+
+            <p><a class="btn btn-danger btn-md" ng-show="!showDeveloperMode" ng-click="goDevMode('on')">offline mode on</a></p>
+            <p><a class="btn btn-danger btn-md" ng-show="showDeveloperMode" ng-click="goDevMode('off')">offline mode off</a></p>
+
+            <p><a class="btn btn-warning btn-md" ng-show="!showDeveloperMode" ng-click="goDevMode('on')">preserve my localStorage and sessionStorage</a></p>
+            <p><a class="btn btn-warning btn-md" ng-show="showDeveloperMode" ng-click="goDevMode('off')">clear my localStorage and sessionStorage</a></p>
+
+            <p><a class="btn btn-secondary btn-md" ng-show="false" ng-click="">placeholder Now</a></p>
+            <p><a class="btn btn-info btn-md" ng-show="false" ng-click="">placeholder Now</a></p>
+            <p><a class="btn btn-success btn-md" ng-show="true" ng-click="">placeholder</a></p>
+
+        </div>
+        <div class="alert alert-success">
+            <h3>page spec:</h3>
+            <p> <p><span class="glyphicon glyphicon-eye-open btn-group-lg "></span> Note</p>
+            How to use this page?
+
+            Calls the Git Hub API for a specific urser info. example: https://api.github.com/users/onestreamline <br />
+            the user name is controlled in Page > settings (not yet  built) ... it's controlled via the form above
+            <br />also, this demostrates 2-way databinding
+            <br />demo how to use Twitter Bootstrap styled buttons
+            </p>
+            <p><span class="glyphicon glyphicon-eye-open btn-group-lg "></span> Note: </p><p>how do I update the form to DB</p>
+        </div>
+        <div class="alert alert-info">
+            <h2>Accounts</h2>
+            <p>Saving your logins to the browser local storage only; the data persist in your browser till its cache wiped out</p>
+            <p>vs saving logins to google drive</p>
+            <p>do both!</p>
+            <h3>GitHub</h3>
+            <!--angularjs form example-->
+            <form name="myFormGitHub" class="navbar-form navbar-left navbar-collapse spacer" ng-submit="submitFunctionGetUser()">
+                <div class="form-group ">
+                    <label>
+                        Company:
+                        <input type="text" class="form-control " placeholder="company..." name="userCompany" ng-model="user.company"
+                               ng-minlength="3" ng-maxlength="15" required>
+                    </label>
+                    <div role="alert">
+                        <span class="error" ng-show="myForm.userCompany.$error.minlength">
+                            Too short! Should be at least 3
+                        </span>
+                        <span class="error" ng-show="myForm.userCompany.$error.maxlength">
+                            Too long! No more than 10 <!--when an alert here is raised, by AngularJS, it's goine to empty the input that's assocaited with this form validation-->
+                        </span>
+                        <span class="error" ng-show="myForm.userCompany.$error.required">
+                            User Company is Required!
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label>
+                        User name:
+                        <input type="text" name="userName" ng-model="user.name" class="form-control" placeholder="user name...">
+
+                    </label>
+                    <div role="alert">
+                        <span class="error" ng-show="myForm.userName.$error.required">
+                            User name is Required!
+                        </span>
+                    </div>
+                </div>
+                <!-- <label>
+                    User Location:
+                    <input type="text" name="userLocation" ng-model="user.location" class="form-control" placeholder="location..">
+                </label>-->
+                <p>
+                    <!-- <input type="submit" id="submit" value="Submit" />-->
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                    <!--another bootstrap button example-->
+                    <button type="submit" class="btn btn-default btn-lg pull-right">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Retrieve User Info
+                    </button>
+                </p>
+            </form>
+            <div class="spacer"></div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>name</th>
+                            <th>company</th>
+                            <th>hireable</th>
+                            <th>repos_url</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.company}}</td>
+                            <td>{{user.hireable}}</td>
+                            <td>{{user.repos_url}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Trello</h3>
+            <p>Trello (user) login via popup from trello</p>
+            <p>Trello (app) login via code</p>
+            <div class="spacer"></div>
+            <span>Trello user info</span>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>name</th>
+                            <th>company</th>
+                            <th>hireable</th>
+                            <th>repos_url</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.company}}</td>
+                            <td>{{user.hireable}}</td>
+                            <td>{{user.repos_url}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <h3>Fitbit</h3>
+            <p>to be built</p>
+            <h3>BitBucket</h3>
+            <p>to be built</p>
+            <h3>Google Drive</h3>
+            <p>google (user) login via popup from google</p>
+            <p>google (app) login via code</p>
+            <h3>EAN API</h3>
+            <p>to be built</p>
+        </div>
+        <div class="alert alert-success">
+            <h3>other modules</h3>
+            link to fitbitDash.html
+            link to EANDash.html
+        </div>
+
+   
+
+</div>
+
+
+ 
+
+    

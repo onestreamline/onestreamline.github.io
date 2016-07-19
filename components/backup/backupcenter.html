@@ -1,0 +1,61 @@
+﻿<div ng-controller="BackupCenterController">
+    <h2>{{ message }}</h2>
+    <div class="alert alert-success">       
+        <div class="alert alert-info">
+            <!--google auth; only show when not logged in -->
+            <div id="authorize-div" style="display:none">
+                <span>Please Authorize the app's access to your Google account (Google Sheets API)</span>
+                <!--Button for the user to click to initiate auth sequence -->
+                <button id="authorize-button" onclick="handleAuthClick(event)">
+                    Authorize
+                </button>
+            </div>
+            <!--already logged in to trello at this point-->   
+            <div>
+                <span></span> <!--Ref: https://developers.google.com/sheets/reference/rest/v4/spreadsheets/create-->
+                <!--check if auth already, do similar to google auth btn, doesn't show when auth already-->
+                <!--todo: why ng-show false doesn't hide; does refresh from true to false after the btn click. use js to overwrite temp fix-->
+                <p><a class="btn btn-primary btn-md" id="TrelloAuthBtn" ng-show="{{TrelloBtnAfterToken}}" ng-click="authorizeTrelloBtn()">log in to trello</a></p>
+
+                <p>
+                    <a class="btn btn-warning btn-md" ng-show="true" ng-click="createSheetBtnClick()">Create a sheet and back up data now</a>
+
+                </p>
+            </div>   
+            <div ng-model="latestsheetURL" ng-hide="false">
+               <p> check my boards backup at
+                <span><a target="_blank" href="{{latestsheetURL}}">{{latestsheetTitle}}</a></span></p>
+                <!--<input type="text" class="" placeholder="latestsheetURL..." name="latestsheetURL" ng-model="latestsheetURL" />-->
+                <!--angular data binding to page; like after an ajax call-->
+                <!--angularjs syntax: {{latestSheetID == null}}-->
+                <!--<p><a class="btn btn-warning btn-md" ng-hide="!showReadBtn" ng-click="readSheetBtnClick()">read the sheet just created</a></p>-->
+            </div>
+            <!--if {{latestSheetID}} is here, then show the button:-->
+        </div>
+        <div class="alert alert-info">
+          
+            <a data-toggle="collapse" href="" data-target="#login2"> log in again manually...</a>
+            <div id="login2" class="collapse">
+                <p><a class="btn btn-primary btn-md" ng-show="true" ng-click="loginTrelloBtnClick()">log in trello</a></p>
+                <div id="authorize-div" style="display:inline">
+                    <span>Please Authorize the app's access to your Google account (Google Sheets API)</span>
+                    <!--Button for the user to click to initiate auth sequence -->
+                    <button id="authorize-button" onclick="handleAuthClick(event)">
+                        Authorize
+                    </button>
+                </div>
+            </div>
+      
+        </div>
+        <!--<div class ="alert alert-info">
+            <span>Specify a DateTime. example: Wednesday @3AM to automatically create a new sheet and push data from trello to google drive. fully automated process </span>
+            <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readSheetBtnClick()">Backup Later on DateTime</a></p>
+
+        </div>-->
+        <!--<div class="alert alert-info">
+            
+            <p><a class="btn btn-primary btn-md" ng-show="true" ng-click="loginTrelloBtnClick()">step 2: log in to trello</a></p>
+            <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readBoardsBtnClick()">step 3: test reading trello boards</a></p>
+        </div>-->
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<div ng-controller="SideBarController">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <!--use flag showSideBar to controll the static vs dynamic sidebar content-->
+        <!--default side bar-->
+        <ul class="nav nav-sidebar" ng-show="showSideBar">
+            <li class="active">
+                <a href="#test1" data-toggle="tab">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="#/settings" data-toggle="tab">Backup Now at Settings</a></li>
+            
+           
+        </ul>
+        <!--dynamic side bar-->
+        <ul class="nav nav-sidebar" ng-hide="showSideBar">
+            <li>
+                <a href="#/">
+                    <!--ng-click="#/')"-->
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Back to Dashboard
+                </a>
+            </li>
+        </ul>
+        <!--price high to low and low to high type of feature is going to be done by bootstrap/bootstrap's extensions not code-->
+        <!--learning note: ng-repeat orderby and filter (like if-else) to show only certain elements-->
+        <ul class="nav nav-sidebar" ng-hide="showSideBar" ng-repeat="h in trelloBoards.boardsResponse | orderBy:'-closed' | filter:{closed:false}">
+            <!--use the same flag to show or not show by ng-show/ng-hide-->
+            <!--<a href="/dashboard.html">-->
+            <!--use href is static, need to use go btn to run the code to see the content; use ng-click-->
+            <!--developer mode btn-->
+            <!--<li>
+               <a style="cursor:pointer;"  ng-show="!showDeveloperMode" ng-click="goDevMode('on')">developer mode on</a>
+            <a style="cursor:pointer;" ng-show="showDeveloperMode" ng-click="goDevMode('off')">developer mode off</a>
+        </li>-->
+            <!--lists-->
+            <!--<li><a href="#" ng-click="" data-toggle="tab">list a </a></li>-->
+
+            <li><a href="#/list/{{h.id}}">{{h.name}}'s lists</a></li>
+        </ul>
+    </div>
+</div>

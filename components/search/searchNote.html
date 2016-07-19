@@ -1,0 +1,39 @@
+﻿
+<div>
+    <!--need this to enable the code below but how do I toggle different controller dynamically, basicaly building a Div that lives in different pages/routes but with different content-->
+    <div class="jumbotron">
+        <!--ng-show=$scope.showDivHome=true...read didn't understand, actually code, understand now-->
+        <h2 class="sub-header"> <span class="glyphicon glyphicon-eye-open btn-group-sm"></span> Note</h2>
+        <div>
+
+
+
+
+
+            <div role="alert" class="alert alert-success">
+                <strong>PS</strong>  even error message from EAN Web Service, it still returns 200 OK ... so the code is still falling into onHotelComplete
+                <br />
+                <span class="label label-warning">Error</span>
+                {{hotel.HotelListResponse.EanWsError.category}}
+                {{hotel.HotelListResponse.EanWsError.presentationMessage}}
+            </div>
+
+
+
+
+            <div role="alert" class="alert alert-info">
+                <strong>troubleshooting purpose ..</strong>  hidden on html raw view /view page source
+                customer session: {{hotel.HotelListResponse.customerSessionId}}
+                number of rooms requested: {{hotel.HotelListResponse.numberOfRoomsRequested}}
+                more results available: {{hotel.HotelListResponse.moreResultsAvailable}}
+                cache key: {{hotel.HotelListResponse.cacheKey}}
+                cache location: {{hotel.HotelListResponse.cacheLocation}}
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</div>

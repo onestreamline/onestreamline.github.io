@@ -1,0 +1,57 @@
+﻿
+<div ng-controller="BackupCenterController">
+    <h2>{{ message }}</h2>
+    <div class="alert alert-success">
+
+        <!--google auth; only show when not logged in -->
+        <div class="alert alert-info" id="authorize-div" style="display:none">
+            <span></span>
+            <span>Authorize access to Google Sheets API</span>
+            <!--Button for the user to click to initiate auth sequence -->
+            <!--<button id="authorize-button" ng-click="handleAuthClickBtn(event)">
+                Authorize
+            </button>-->
+            <button id="authorize-button" onclick="handleAuthClick(event)">
+                Authorize
+            </button>
+            <!--<button id="authorize-button" ng-click="checkAuth1()">
+                check if auth
+            </button>-->
+        </div>
+        <!--already logged in to trello at this point-->
+
+
+        <div class="alert alert-info">
+
+            <span></span> <!--Ref: https://developers.google.com/sheets/reference/rest/v4/spreadsheets/create-->
+            <p>
+                <a class="btn btn-warning btn-md" ng-show="true" ng-click="createSheetBtnClick()">Create a sheet and back up data now</a>
+            </p>
+            <div ng-model="latestsheetURL" ng-hide="false">
+                check my boards backup at
+                <a target="_blank" href="{{latestsheetURL}}">{{latestsheetURL}}</a>
+                <!--<input type="text" class="" placeholder="latestsheetURL..." name="latestsheetURL" ng-model="latestsheetURL" />-->
+                <!--angular data binding to page; like after an ajax call-->
+                <!--angularjs syntax: {{latestSheetID == null}}-->
+                <!--<p><a class="btn btn-warning btn-md" ng-hide="!showReadBtn" ng-click="readSheetBtnClick()">read the sheet just created</a></p>-->
+
+            </div>
+            <!--if {{latestSheetID}} is here, then show the button:-->
+
+        </div>
+        <div class="alert alert-info">
+            <span>Specify a DateTime. example: Wednesday @3AM to automatically create a new sheet and push data from trello to google drive. fully automated process </span>
+            <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readSheetBtnClick()">Backup Later on DateTime</a></p>
+
+        </div>
+        <div class="alert alert-info">
+
+            <p><a class="btn btn-primary btn-md" ng-show="true" ng-click="loginTrelloBtnClick()">step 2: log in to trello</a></p>
+            <p><a class="btn btn-warning btn-md" ng-show="true" ng-click="readBoardsBtnClick()">step 3: test reading trello boards</a></p>
+        </div>
+    </div>
+
+
+
+
+</div>

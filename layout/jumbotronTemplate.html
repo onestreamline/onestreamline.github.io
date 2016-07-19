@@ -1,0 +1,25 @@
+﻿<div>
+    <!--need this to enable the code below but how do I toggle different controller dynamically, basicaly building a Div that lives in different pages/routes but with different content-->
+        <!--ng-show=$scope.showDivHome=true...read didn't understand, actually code, understand now-->
+    <div ng-show="showDeveloperMode">
+        <div class="jumbotron">
+            Developer debug mode: {{showDeveloperMode}} from localStorage 
+            <!-- Developer debug mode: {{showDeveloperMode}} from localStorage-->
+            <br />
+            page spec:{{$parent.pageSpec}} <!--syntax: to access hierarchy level scope-->
+            <br />
+            debug info: see AngularJS $log
+            <!--my own debugger:
+            show div? {{showDivOnlyIndex}}
+            current page: {{page.path}}
+            which if-else if I'm at: {{path1.path}}
+            <br />via parent method:  {{$parent.showDivOnlyIndex}}-->
+            <!--reuseable component. reuseable btn-->
+        </div>
+    </div>
+   
+    <!--back to home btn: move this to somewhere...-->
+    <!--<button ng-click="goBtn('/')" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Back to Home
+    </button>-->
+</div>

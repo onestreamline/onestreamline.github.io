@@ -1,0 +1,81 @@
+<div class="container" ng-controller="ProfileController" >
+    <style>
+        .spacer {
+            margin-top: 40px; /* define margin as you see fit */
+        }
+    </style>
+    <div ng-controller="JumbotronTemplateController">
+        <div ng-include="'layout/jumbotronTemplate.html'" ng-show="showJumbotronTemplate">
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h2 class="sub-header">{{ title }}</h2>
+        <p>I'm a software engineer with a particular interest in web technologies (esp. JavaScript and C#).</p>
+        
+        <!--<div>
+            <p><a class="btn btn-primary btn-md" ng-show="!showDeveloperMode" ng-click="goDevMode('on')">developer mode on</a></p>
+            <p><a class="btn btn-primary btn-md" ng-show="showDeveloperMode"  ng-click="goDevMode('off')">developer mode off</a></p>
+        </div>-->
+        <!--<div ng-show="showDeveloperMode">
+            Developer debug mode: 
+            project spec: 
+        </div>-->
+    </div>
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>AngularJS <span class="glyphicon glyphicon-font btn-group-sm"></span></h4>
+            <p>lightweight site quick development consume API minimal hosting </p>
+
+            <h4>Solr <span class="glyphicon glyphicon-file btn-group-sm"></span></h4>
+            <p>....</p>
+
+            <h4>SSO <span class="glyphicon glyphicon-fire btn-group-sm"></span></h4>
+            <p>....via SAML</p>
+           
+            <h4>firefox and its companies</h4>
+            <p>firebug saml tracer ...</p>
+
+            <h4>Bootstrap</h4>
+            <p>UI css mobile friendly responsive design </p>
+        </div>
+        <div class="col-lg-6">
+
+            <h4>C#, .NET <span class="glyphicon glyphicon-repeat btn-group-sm"></span></h4>
+            <p>....Linq to SQL/EF, Task class, delegation?  threading? interface design? indp injection?</p>
+
+            <h4>SQL</h4>
+            <p>....store procesure, verifying data</p>
+
+            <h4>asp.net web api and asp.net mvc</h4>
+            <p>.... website, web service for mobile</p>
+
+            <h4>WCF</h4>
+            <p>... mediation layer proj.</p>
+        </div>
+    </div>
+    <div class="row marketing spacer col-lg-12">
+      
+            <span class="label label-default">full-stack developer</span>
+            <span class="label label-primary">C#</span>
+            <span class="label label-success">.NET</span>
+            <span class="label label-info">ASP.net asp.net MVC asp.net Web API</span>
+            <span class="label label-warning">RESTful Web service</span>
+            <span class="label label-danger">Visual Studio TFS</span>
+
+            <span class="label label-default">server code developer</span>
+            <span class="label label-primary">SaaS</span>
+            <span class="label label-success">WCF</span>
+            <span class="label label-info">SQL server</span>
+            <span class="label label-warning">Windows</span>
+            <span class="label label-danger">Twitter Bootstrap</span>
+
+        <span class="label label-default">Solr</span>
+        <span class="label label-primary">dotMemory</span>
+        <span class="label label-success">J Meter</span>
+        <span class="label label-info">TomCat</span>
+        <span class="label label-warning">jQuery</span>
+        <span class="label label-danger">JavaScript</span>
+    
+    </div>
+    </div>
