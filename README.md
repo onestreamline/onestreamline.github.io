@@ -1,5 +1,9 @@
-This Repo is for hosting the Website
-The Repo for code is in BitBucket 
+This Repo is for hosting the Website; the Repo for code is in BitBucket
+This is my personal Website to showcase my sample projects and resume; I build light weight Websites suitable for small-biz; free hosting and Content Management System; custom POS plugins. 
+
+
+I am a gardener, yogi, swimmer, and software engineer. I work for @HealthSparq, a software and healthcare company; we make it easy for you to make an educated choice about your health care options by comparing cost and quality.
+I solve problems, communicate solutions clearly, and collaborate effectively with others. 
 
 
 Learning Notes: 
