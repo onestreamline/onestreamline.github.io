@@ -38,6 +38,10 @@ section.coverletter p {
     margin-left: 0px;
 }
 
+section.sum p {
+    margin-left: 20px;
+}
+
 section ul {
     list-style-type: disc;
 }
