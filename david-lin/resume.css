@@ -68,6 +68,7 @@ section ul {
 .table {
     display: table;
     margin-left: 20px;
+    width: 100%;
 }
 
 .tablerow {
