@@ -72,6 +72,7 @@ section ul {
 
 .tablerow {
     display: table-row;
+    width: 100%;
 }
 
 .jobtitle {
