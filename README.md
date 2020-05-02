@@ -10,10 +10,18 @@ medium
 wordpress
 
 ## Clouds: 
-- Clojure 
-Java 
-Python 
-Ruby 
+- API 
+- HTTP
+- REST 
 
-8051 assembly language 
-Verilog HDL (hardware description languags) 
+- Clojure 
+- Java 
+- Python 
+- Ruby 
+- JavaScript 
+- HTML 
+- SQL 
+
+
+- 8051 assembly language 
+- Verilog HDL (hardware description languags) 
