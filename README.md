@@ -10,9 +10,10 @@ medium
 wordpress
 
 ## Clouds: 
-- API 
 - HTTP
 - REST 
+- API 
+===
 
 - Clojure 
 - Java 
