@@ -10,7 +10,7 @@ medium
 wordpress
 
 ## Clouds: 
-Clojure 
+- Clojure 
 Java 
 Python 
 Ruby 
