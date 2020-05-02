@@ -13,7 +13,7 @@ wordpress
 - HTTP
 - REST 
 - API 
-===
+
 ---
 - Clojure 
 - Java 
@@ -23,6 +23,6 @@ wordpress
 - HTML 
 - SQL 
 
-
+---
 - 8051 assembly language 
 - Verilog HDL (hardware description languags) 
