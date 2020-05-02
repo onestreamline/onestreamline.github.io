@@ -11,6 +11,7 @@ wordpress
 
 ## Setup 
 `lein new app my-website`
+`<!-- This is a comment -->`
 
 ## Clouds: 
 - HTTP
@@ -18,7 +19,11 @@ wordpress
 - API 
 
 ---
+***
+-------------
 - Apigee
+
++++
 
 ## Language Clouds: 
 - Clojure 
