@@ -6,13 +6,21 @@ I'm a software engineer for HSQ, Cambia Health Solutions. HSQ exists to help peo
 
 
 ## Websites: 
--[One Streamline](http://www.OneStreamline.com) <br/>
+- [One Streamline](http://www.OneStreamline.com) <br/>
 - Medium ... TBD 
 
 ## Setup 
 `lein new app my-website-onestreamline`
 `lein test`
 `;;todo: ....`
+
+```
+{
+  "firstName": "David",
+  "lastName": "Lin",
+  "profession": "dog massager"
+}
+```
 
 ---
 
@@ -28,12 +36,19 @@ Seeking an opportinuty to chat with your orginazation about interesting things h
 
 ---
 
+{{TOC}}
+Postman\
+Gatling\
+BMW performance and sound package\
+Python\
+
+---
+
 ## Clouds: 
 - HTTP
 - REST 
 - API 
-
-group2
+\
 - Apigee
 
 ## Language Clouds: 
@@ -41,13 +56,19 @@ group2
 - Java 
 - Python 
 - Ruby  
+
+\
 - HTML 
 - Markdown 
 
-group2
+\
 - JavaScript 
 - SQL 
 
-group3
+\
 - 8051 assembly language 
 - Verilog HDL (hardware description languags) 
+
+---
+- [ ] Unfinished task list item
+- [x] Finished task list item
