@@ -37,10 +37,10 @@ Seeking an opportinuty to chat with your orginazation about interesting things h
 ---
 
 {{TOC}}
-Postman\
-Gatling\
-BMW performance and sound package\
-Python\
+Postman
+Gatling
+BMW performance and sound package
+Python
 
 ---
 
@@ -48,7 +48,6 @@ Python\
 - HTTP
 - REST 
 - API 
-\
 - Apigee
 
 ## Language Clouds: 
@@ -57,18 +56,14 @@ Python\
 - Python 
 - Ruby  
 
-\
+
 - HTML 
 - Markdown 
 
-\
+
 - JavaScript 
 - SQL 
 
-\
+
 - 8051 assembly language 
 - Verilog HDL (hardware description languags) 
-
----
-- [ ] Unfinished task list item
-- [x] Finished task list item
