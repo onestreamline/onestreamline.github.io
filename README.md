@@ -8,6 +8,9 @@ I'm a software engineer for HSQ, Cambia Health Solutions. HSQ exists to help peo
 ## Websites: 
 - [One Streamline](http://www.OneStreamline.com) <br/>
 - Medium ... TBD 
+- LinkedIn
+- GlassDoor
+- Indeed
 
 ## Setup 
 `lein new app my-website-onestreamline`
@@ -49,18 +52,15 @@ Python
 - API 
 - Apigee
 
-## Language
+
+### Language
 - Clojure 
 - Java 
 - Python 
 - Ruby  
 - HTML 
 - Markdown 
-
-
 - JavaScript 
 - SQL 
-
-
 - 8051 assembly language 
 - Verilog HDL (hardware description languags) 
