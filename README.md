@@ -65,3 +65,9 @@ Python
 - SQL 
 - 8051 assembly language 
 - Verilog HDL (hardware description languags) 
+
+---
+## How to Develop
+1. CNAME > domain
+2. GoDaddy > domain
+3. username.github.io > settings 
