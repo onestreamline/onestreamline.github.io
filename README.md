@@ -36,27 +36,24 @@ Seeking an opportinuty to chat with your orginazation about interesting things h
 
 ---
 
-{{TOC}}
+## TOC
+### Random
 Postman
 Gatling
 BMW performance and sound package
 Python
 
----
-
-## Clouds: 
+### Protocol
 - HTTP
 - REST 
 - API 
 - Apigee
 
-## Language Clouds: 
+## Language
 - Clojure 
 - Java 
 - Python 
 - Ruby  
-
-
 - HTML 
 - Markdown 
 
