@@ -1,11 +1,12 @@
-## Bio:
-Yogi, swimmer, gardener, and computer engineer. HealthCare industry. Hobbies: martial arts, ping pong, cars w. manual gearboxes, automatic watches, clojure...
-
-## About:
+## About
 I'm a software engineer for HSQ, Cambia Health Solutions. HSQ exists to help people make smarter health care choices. We achieve that every day by partnering with health plans to offer their members the most integrated tools possible and make sure they have everything they need to understand total cost and quality before making health care decisions. We have a proven history of “firsts” and innovation that have helped us take the leading position among transparency tool. I'm excited to be a part of it! 
 
 
-## Websites: 
+## Bio
+Yogi, swimmer, gardener, and computer engineer. HealthCare industry. Hobbies: martial arts, ping pong, cars w. manual gearboxes, automatic watches, clojure...
+
+
+## Websites
 - [One Streamline](http://www.OneStreamline.com) <br/>
 - Medium ... TBD 
 - LinkedIn
@@ -37,7 +38,7 @@ Seeking an opportinuty to chat with your orginazation about interesting things h
 
 - Currently working on microservice projects using Clojure and Java with test frameworks; cucumber in Ruby and Gatling in scala. Also CI/CD, service onwership, Python, functional programming.
 
----
+
 
 ## TOC
 ### Random
