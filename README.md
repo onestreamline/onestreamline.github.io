@@ -1,17 +1,10 @@
-## About
-I'm a software engineer for HSQ, Cambia Health Solutions. HSQ exists to help people make smarter health care choices. We achieve that every day by partnering with health plans to offer their members the most integrated tools possible and make sure they have everything they need to understand total cost and quality before making health care decisions. We have a proven history of “firsts” and innovation that have helped us take the leading position among transparency tool. I'm excited to be a part of it! 
+## How to Develop
+This repo is for contents to be hosted on GitHub pages for my portfoilo website, resume. 
+Visit OneStreamline.com
 
-
-## Bio
-Yogi, swimmer, gardener, and computer engineer. HealthCare industry. Hobbies: martial arts, ping pong, cars w. manual gearboxes, automatic watches, clojure...
-
-
-## Websites
-- [One Streamline](http://www.OneStreamline.com) <br/>
-- Medium ... TBD 
-- LinkedIn
-- GlassDoor
-- Indeed
+1. CNAME > domain
+2. GoDaddy > domain (DNS) 
+3. username.github.io > settings 
 
 ## Setup 
 `lein new app my-website-onestreamline`
@@ -22,52 +15,21 @@ Yogi, swimmer, gardener, and computer engineer. HealthCare industry. Hobbies: ma
 {
   "firstName": "David",
   "lastName": "Lin",
-  "profession": "dog massager"
+  "profession": "dog massager and computer engineer"
 }
 ```
-
 ---
 
-## Objective 
-Seeking an opportinuty to chat with your orginazation about interesting things happening.
+## Bio
+Yogi, swimmer, gardener, and computer engineer. HealthCare industry. Hobbies: martial arts, ping pong, cars w. manual gearboxes, automatic watches, clojure...
 
-## Summary 
-- Yogi, gardener, and software engineer. I work for a software and healthcare company who makes it easy for people to make educated choices about their health care options.
+## About
+I'm a software engineer for HSQ, Cambia Health Solutions. HSQ exists to help people make smarter health care choices. We achieve that every day by partnering with health plans to offer their members the most integrated tools possible and make sure they have everything they need to understand total cost and quality before making health care decisions. We have a proven history of “firsts” and innovation that have helped us take the leading position among transparency tool. I'm excited to be a part of it! 
 
-- With a strong ability to research and solve complex issues independently, I am a self-motivated individual who learns new technologies quickly.
+## Websites
+- [One Streamline](http://www.OneStreamline.com) <br/>
+- Medium ... TBD 
+- LinkedIn
+- GlassDoor
+- Indeed 
 
-- Currently working on microservice projects using Clojure and Java with test frameworks; cucumber in Ruby and Gatling in scala. Also CI/CD, service onwership, Python, functional programming.
-
-
-
-## TOC
-### Random
-Postman
-Gatling
-BMW performance and sound package
-Python
-
-### Protocol
-- HTTP
-- REST 
-- API 
-- Apigee
-
-
-### Language
-- Clojure 
-- Java 
-- Python 
-- Ruby  
-- HTML 
-- Markdown 
-- JavaScript 
-- SQL 
-- 8051 assembly language 
-- Verilog HDL (hardware description languags) 
-
----
-## How to Develop
-1. CNAME > domain
-2. GoDaddy > domain
-3. username.github.io > settings 
