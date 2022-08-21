@@ -5,7 +5,7 @@
     <meta name="description" content="David Lin | Homepage">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="David Lin">
-    <meta http-equiv="refresh" content="60; URL='/yen-lin/resume.html'" />
+    <meta http-equiv="refresh" content="10; URL='/yen-lin/resume.html'" />
 </head>
 <body>
     <p id="demo"></p>
@@ -16,11 +16,29 @@
                 get: (searchParams, prop) => searchParams.get(prop),
         });
         // Get the value of "some key" in example "https://onestreamline.com/?name=value"
-        let value = params.name; // "some_value"
+        let value = params.page; // "some_value"
         console.log(value); 
+        
+        switch(value) {
+            case "yen":
+                window.location.replace("http://www.onestreamline.com/yen-lin/resume.html");
+                break;
+            default:
+                text = "bye bye bye...";
+} 
         
     </script> 
     
-    <p>redirect to another page... (use index.html to toggle!)</p>    
+    <p>Will redirect to another page in 10sec... </p>    
+    
+    <p>
+        http://www.onestreamline.com/?page=yen
+        http://www.onestreamline.com/?page=david
+        http://www.onestreamline.com/?page=fam
+        http://www.onestreamline.com/?page=family 
+        http://www.onestreamline.com/?page=warmup
+    </p>
+    <p>note: the default home page right after the slash is index.html per GitHub Pages DNS/Server settings</p>
+    <p>using the index.html to toggle!</p>
 </body>
 </html>
