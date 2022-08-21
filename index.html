@@ -15,7 +15,6 @@
         // Get the value of "some_key" in example "https://onestreamline.com/?key=value"
         let value = params.page; // "some_value"
         console.log(value); 
-        document.getElementById("demo").innerHTML = value;
         
         switch(value) {
             case "yen":
@@ -38,20 +37,6 @@
                 text = "bye bye bye...";
         }        
     </script> 
-    
     <h1>Will redirect to another page in 10sec... </h1>    
-    <p id="demo"></p>
-    
-    <h3>the list of pages</h3>
-    <p>
-        http://www.onestreamline.com/?page=yen
-        http://www.onestreamline.com/?page=david
-        http://www.onestreamline.com/?page=fam
-        http://www.onestreamline.com/?page=family 
-        http://www.onestreamline.com/?page=warmup
-    </p>
-    <br/>
-    <p>note: the default homepage (the "domain.com/" right after the slash) is index.html per GitHub Pages DNS/Server settings</p>
-    <p>using the index.html to toggle!</p>
 </body>
 </html>
