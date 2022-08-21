@@ -8,10 +8,7 @@
     <meta http-equiv="refresh" content="10; URL='/yen-lin/resume.html'" />
 </head>
 <body>
-    <p id="demo"></p>
     <script>
-   
-        document.getElementById("demo").innerHTML = "Hello JavaScript!";
         const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
         });
@@ -19,18 +16,34 @@
         let value = params.page; // "some_value"
         console.log(value); 
         
+        document.getElementById("demo").innerHTML = value;
+        
         switch(value) {
             case "yen":
                 window.location.replace("http://www.onestreamline.com/yen-lin/resume.html");
                 break;
+            case "david":
+                window.location.replace("http://www.onestreamline.com/david-lin/resume.html");
+                break;
+            case "fam":
+            case "family":
+                window.location.replace("http://www.onestreamline.com/family.html");
+                break;
+            case "warmup":
+                window.location.replace("http://www.onestreamline.com/warmup.html");
+                break;
+            case "workout":
+                window.location.replace("http://www.onestreamline.com/workout.html");
+                break;
             default:
                 text = "bye bye bye...";
-} 
-        
+        }        
     </script> 
     
-    <p>Will redirect to another page in 10sec... </p>    
+    <p>Will redirect to another page in 10 sec... </p>    
+    <p id="demo"></p>
     
+    <h3>list of pages</h3>
     <p>
         http://www.onestreamline.com/?page=yen
         http://www.onestreamline.com/?page=david
@@ -38,7 +51,7 @@
         http://www.onestreamline.com/?page=family 
         http://www.onestreamline.com/?page=warmup
     </p>
-    <p>note: the default home page right after the slash is index.html per GitHub Pages DNS/Server settings</p>
+    <p>note: the default homepage (the "domain.com/" right after the slash) is index.html per GitHub Pages DNS/Server settings</p>
     <p>using the index.html to toggle!</p>
 </body>
 </html>
