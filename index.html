@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp1">
 <head>
-    <title>Hello World</title>
+    <title>Hello World - CLI - UI </title>
     <meta name="description" content="David Lin | Homepage">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="David Lin">
@@ -12,10 +12,9 @@
         const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
         });
-        // Get the value of "some key" in example "https://onestreamline.com/?name=value"
+        // Get the value of "some_key" in example "https://onestreamline.com/?key=value"
         let value = params.page; // "some_value"
         console.log(value); 
-        
         document.getElementById("demo").innerHTML = value;
         
         switch(value) {
@@ -40,10 +39,10 @@
         }        
     </script> 
     
-    <p>Will redirect to another page in 10 sec... </p>    
+    <p>Will redirect to another page in 10sec... </p>    
     <p id="demo"></p>
     
-    <h3>list of pages</h3>
+    <h3>the list of pages</h3>
     <p>
         http://www.onestreamline.com/?page=yen
         http://www.onestreamline.com/?page=david
