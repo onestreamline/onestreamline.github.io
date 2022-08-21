@@ -8,7 +8,19 @@
     <meta http-equiv="refresh" content="60; URL='/david-lin/resume.html'" />
 </head>
 <body>
-  redirect to another page...
-  use index.html to toggle!     
+    <p id="demo"></p>
+    <script>
+   
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // Get the value of "some key" in example "https://onestreamline.com/?name=value"
+        let value = params.name; // "some_value"
+        console.log(value); 
+        
+    </script> 
+    
+    <p>redirect to another page... (use index.html to toggle!)</p>    
 </body>
 </html>
