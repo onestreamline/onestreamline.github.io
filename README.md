@@ -10,9 +10,9 @@ TBD
 ### Homepage toggle feature 
 Homepage is index.html; the default homepage (the "domain.com/" right after the slash) is index.html per GitHub Pages DNS/Server settings; use the index.html to toggle!
 1. http://www.onestreamline.com/?page=david
-1. http://www.onestreamline.com/?page=fam
 1. http://www.onestreamline.com/?page=family 
 1. http://www.onestreamline.com/?page=warmup
+1. http://www.onestreamline.com/?page=coffee-n-tea
 
 ## How to Develop
 This repo is for contents to be hosted on GitHub pages for my portfoilo website, resume. 
