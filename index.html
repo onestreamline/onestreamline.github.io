@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp1">
 <head>
-    <title>Hello World - CLI - UI </title>
+    <title>Hello World - CLI - UI - Index - Homepage </title>
     <meta name="description" content="David Lin | Homepage">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="David Lin">
-    <meta http-equiv="refresh" content="10; URL='/yen-lin/resume.html'" />
+    <meta http-equiv="refresh" content="3; URL='/david-lin/resume2.html'" />
 </head>
 <body>
     <script>
         const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
-        });
-        // Get the value of "some_key" in example "https://onestreamline.com/?key=value"
+        }); // Get the value of "some_key" in example "https://onestreamline.com/?key=value"
         let value = params.page; // "some_value"
         console.log(value); 
-        
         switch(value) {
-            case "yen":
-                window.location.replace("http://www.onestreamline.com/yen-lin/resume.html");
-                break;
             case "david":
-                window.location.replace("http://www.onestreamline.com/david-lin/resume.html");
+                window.location.replace("http://www.onestreamline.com/david-lin/resume2.html");
                 break;
             case "fam":
             case "family":
@@ -37,6 +32,7 @@
                 text = "bye bye bye...";
         }        
     </script> 
-    <h1>Will redirect to another page in 10sec... </h1>    
+    <h1>Will redirect to my resume page in 3 sec... </h1> 
+    </h3>Or go there directly... <a href="https://onestreamline.com/?page=david">click here</a></h3>
 </body>
 </html>
